@@ -65,7 +65,8 @@ const spanErrorMsg = document.querySelector(".errorMsg");
 function validaInput() {
 	const valor = inputText.value;
 	if (!valor) {
-		inputText.style = "border:2px solid #e63636; background-color:#CCCCCC";
+		inputText.style =
+			"border:2px solid #e63636; background-color:#6e6e6e;color:#ffffff;";
 		spanErrorMsg.textContent =
 			"↓ Este campo é de preenchimento obrigatório! ↓";
 		spanErrorMsg.style = "display:inline-block;";
@@ -90,7 +91,7 @@ const addElement = (event) => {
 	if (!valor) {
 		validaInput();
 	} else {
-		removeValidaErro();
+		removeValidaInput();
 		// Limpa campo
 		event.target.elements[0].value = "";
 		// Cria o item com seu respectivo removedor.
