@@ -1,58 +1,68 @@
 body {
-      margin: 0;
-      text-align: center;
-  }
+  margin: 0;
+  text-align: center;
+}
+
 header {
-      background-color: #000;
-      color: yellow;
-      margin: 0;
-      padding: 50px;
-  }
+  background-color: #000;
+  color: yellow;
+  margin: 0;
+  padding: 50px;
+}
+
 .content {
-      align-items: center;
-      background-color: #3b5510;
-      color: #fff;
-      display: flex;
-      justify-content: space-around;
-      margin: 0;
-      padding: 60px 30px 230px;
-  }
+  align-items: center;
+  background-color: #3b5510;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 60px 30px 230px;
+}
+
 .wrapper-linguagens {
-      text-align: left;
-  }
+  text-align: left;
+}
+
 h1 {
-      font-size: 3em;
-      margin: 0;
-  }
+  font-size: 3em;
+  margin: 0;
+}
+
 #formulario {
-      align-items: center;
-      display: flex;
-      flex-flow: column wrap;
-      justify-content: center;
-  }
+  align-items: center;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+
 .btnSubmit {
-      margin-top: 20px;
-  }
+  margin-top: 20px;
+}
+
 .errorMsg {
-      color: #e63636;
-      display: none;
-      font-size: 12px;
-      margin: 3px 0 10px 0;
-  }
+  color: #e63636;
+  display: none;
+  font-size: 12px;
+  margin: 3px 0 10px 0;
+}
+
 a {
-      color: yellowgreen;
-  }
+  color: yellowgreen;
+}
+
 footer {
-      background-color: #000;
-      color: yellow;
-      margin: 0;
-      padding: 40px 40px 80px;
-      position: relative;
-      text-align: left;
-  }
+  background-color: #000;
+  color: yellow;
+  margin: 0;
+  padding: 40px 40px 80px;
+  position: relative;
+  text-align: left;
+}
+
 .copyright {
-      bottom: 6px;
-      left: 590px;
-      position: absolute;
-      text-align: center;
-  }
+  bottom: 6px;
+  left: 590px;
+  position: absolute;
+  text-align: center;
+}
