@@ -4,17 +4,17 @@ let incrementoLista = 0;
 
 const renderizaParagrafoListaVazia = () => {
 	wrapperLinguagens.innerHTML = `
-        <h2>Lista de Linguagens:</h2>
-        <p class="lista-vazia">Não existem elementos nessa lista</p>
-    `;
+      <h2>Lista de Linguagens:</h2>
+      <p class="lista-vazia">Não existem elementos nessa lista</p>
+`;
 };
 
 const renderizaLista = () => {
 	wrapperLinguagens.innerHTML = `
-        <h2>Lista de Linguagens:</h2>
-        <ul class="lista-linguagens">
-        </ul>
-    `;
+      <h2>Lista de Linguagens:</h2>
+      <ul class="lista-linguagens">
+      </ul>
+`;
 
 	incrementoLista = 0;
 
@@ -58,20 +58,43 @@ const criarItem = (valor) => {
 	return { valor, idItem, itemElement };
 };
 
+const inputText = document.querySelector("#elemento");
+const spanErrorMsg = document.querySelector(".errorMsg");
+
+// Adicionam as configurações de validação do campo
+function validaInput() {
+	const valor = inputText.value;
+	if (!valor) {
+		inputText.style = "border:2px solid #e63636; background-color:#CCCCCC";
+		spanErrorMsg.textContent =
+			"↓ Este campo é de preenchimento obrigatório! ↓";
+		spanErrorMsg.style = "display:inline-block;";
+	}
+}
+// Remove as configurações de validação do campo
+function removeValidaInput() {
+	const valor = inputText.value;
+	if (valor) {
+		inputText.style = "";
+		spanErrorMsg.textContent = "";
+		spanErrorMsg.style = "display:none;";
+	}
+}
+
 const addElement = (event) => {
 	event.preventDefault();
 
 	//Captura o valor
 	const valor = event.target.elements[0].value;
-
-	// Limpa campo
-	event.target.elements[0].value = "";
-
-	//Realiza a verificação do campo do formulário se está vazio ou não e cria o item com seu respectivo removedor.
-	const itemLista = criarItem(valor);
-	if (valor == "") {
-		alert("O campo (Linguagem) é de preenchimento obrigatório!");
+	//Se o valor no campo for vazio chama
+	if (!valor) {
+		validaInput();
 	} else {
+		removeValidaErro();
+		// Limpa campo
+		event.target.elements[0].value = "";
+		// Cria o item com seu respectivo removedor.
+		const itemLista = criarItem(valor);
 		listaDeLinguagens.push(itemLista);
 		renderizaLista();
 	}

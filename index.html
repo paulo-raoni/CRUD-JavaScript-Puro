@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8" />
 		<link rel="icon" href="imagens/js.png" />
@@ -20,14 +21,11 @@
 			</div>
 
 			<div>
-				<h3>Adicione elemento:</h3>
-				<form>
-					<input
-						type="text"
-						name="elemento"
-						id="elemento"
-						placeholder="Linguagem" />
-					<input type="submit" value="Adicionar" />
+				<h3 class="error">Adicione elemento:</h3>
+				<form id="formulario">
+					<span class="errorMsg"></span>
+					<input type="text" name="elemento" id="elemento" placeholder="Linguagem" />
+					<input type="submit" value="Adicionar" class="btnSubmit" />
 				</form>
 			</div>
 		</div>
@@ -37,42 +35,10 @@
 				<strong>Contatos:</strong>
 				<br />
 				<ul>
-					<li>
-						Instagram:
-						<a
-							href="https://www.instagram.com/"
-							target="_blank"
-							rel="noopener noreferrer"
-							>@paulo.raoni</a
-						>
-					</li>
-					<li>
-						LinkedIn:
-						<a
-							href="https://www.linkedin.com/in/paulo-raoni/"
-							target="_blank"
-							rel="noopener noreferrer"
-							>paulo-raoni</a
-						>
-					</li>
-					<li>
-						Facebook:
-						<a
-							href="https://www.facebook.com/braziliandev"
-							target="_blank"
-							rel="noopener noreferrer"
-							>braziliandev</a
-						>
-					</li>
-					<li>
-						Youtube:
-						<a
-							href="https://www.youtube.com/braziliandev"
-							target="_blank"
-							rel="noopener noreferrer"
-							>braziliandev</a
-						>
-					</li>
+					<li>Instagram:<a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">@paulo.raoni</a></li>
+					<li>LinkedIn: <a href="https://www.linkedin.com/in/paulo-raoni/" target="_blank" rel="noopener noreferrer">paulo-raoni</a></li>
+					<li>Facebook: <a href="https://www.facebook.com/braziliandev" target="_blank" rel="noopener noreferrer">braziliandev</a></li>
+					<li>Youtube: <a href="https://www.youtube.com/braziliandev" target="_blank" rel="noopener noreferrer">braziliandev</a></li>
 				</ul>
 			</div>
 			<div class="copyright">
@@ -84,4 +50,5 @@
 
 		<script src="script.js"></script>
 	</body>
+
 </html>
