@@ -58,40 +58,38 @@ const criarItem = (valor) => {
 	return { valor, idItem, itemElement };
 };
 
+// Captura o elemento input do tipo text do formulário
 const inputText = document.querySelector("#elemento");
+
+//Captura o elemento span
 const spanErrorMsg = document.querySelector(".errorMsg");
 
-// Adicionam as configurações de validação do campo
-function validaInput() {
-	const valor = inputText.value;
+// Validação do campo Linguagem
+const verificadorDeCampoVazio = function (valor) {
+	valor = inputText.value;
 	if (!valor) {
 		inputText.style =
 			"border:2px solid #e63636; background-color:#6e6e6e;color:#ffffff;";
-		spanErrorMsg.textContent =
-			"↓ Este campo é de preenchimento obrigatório! ↓";
+		spanErrorMsg.textContent = "↓ Este campo é de preenchimento obrigatório! ↓";
 		spanErrorMsg.style = "display:inline-block;";
-	}
-}
-// Remove as configurações de validação do campo
-function removeValidaInput() {
-	const valor = inputText.value;
-	if (valor) {
+	} else {
 		inputText.style = "";
 		spanErrorMsg.textContent = "";
 		spanErrorMsg.style = "display:none;";
 	}
-}
+};
 
 const addElement = (event) => {
 	event.preventDefault();
 
 	// Captura o valor
 	const valor = event.target.elements[0].value;
-	// Se o valor no campo for vazio chama
 	if (!valor) {
-		validaInput();
+		// Se o valor no campo for vazio renderiza mensagem de erro.
+		verificadorDeCampoVazio();
 	} else {
-		removeValidaInput();
+		// Se o valor no campo for preenchido remove a mensagem de erro e adiciona o valor digitado na lista.
+		verificadorDeCampoVazio();
 		// Limpa campo
 		event.target.elements[0].value = "";
 		// Cria o item com seu respectivo removedor.
